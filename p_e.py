@@ -1,19 +1,10 @@
 from tkinter import *
 import cv2
 root=Tk()
-root.geometry('600x700')
-canvas = Canvas(root, width=600, height=700)
+canvas = Canvas(root, width=500, height=600)
 canvas.pack()
-
 background = PhotoImage(file = "bg2.png")
-canvas.create_image(600, 700, image=background)
-
-#background_label = Label(root, image=background)
-#background_label.place(x=0, y=0, relwidth=1, relheight=1)
-#title=Label(root, text='PHOTO EDITOR', fg='blue')
-#title.config(font=("Bradley Hand ITC",30 ))
-#title.pack()
-button_photo=Button(root, text='EDIT PHOTOS',width=25, height=3)
-#background_label.pack()
-button_photo.pack()
+button_img = PhotoImage(file = "edit.png").subsample(2,3)
+canvas.create_image(250, 300, image=background)
+button_edit=Button(root, text='EDIT',width=185, height=50, image=button_img, bg='white', bd=8).place(x=108,y=237)
 root.mainloop()
