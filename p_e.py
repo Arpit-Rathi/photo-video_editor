@@ -73,7 +73,7 @@ def done():
 
 
 def dialogbox():
-       filename = filedialog.askopenfilename(initialdir="E:\"", title='Select a image file', filetypes=(("jpg files", "*.jpg"), ("png files", "*.png")))
+       filename = filedialog.askopenfilename( title='Select a image file', filetypes=(("jpg files", "*.jpg"), ("png files", "*.png")))
        if(filename!=''):
          img = cv2.imread(filename)
          global image,i,blurred,bright,fil
